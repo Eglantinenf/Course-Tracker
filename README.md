@@ -6,7 +6,7 @@ Welcome to the Course Tracker! This project was created for personal use to help
 
 The Course Tracker allows users to add courses with titles and total lecture counts, mark lectures as completed, and see an overview of the total time left for their courses. Its sleek interface and real-time updates make it a handy tool for anyone looking to stay organized and on top of their learning journey.
 
-#Note: If you want to clear the information you added, you can do so by clearing the local storage... :)
+# Note: If you want to clear the information you added, you can do so by clearing the local storage... :)
 
 ## 📦 Features  
 
