@@ -18,7 +18,7 @@ The tutorial on clearing Local Storage can be found below in this README.
 
 ## 🔗 Live Demo  
 
-Feel free to try out the online demo of the Course Tracker here: [Live Demo](#)  
+Feel free to try out the online demo of the Course Tracker here: [Live Demo](https://eglantinenf.github.io/Course-Tracker/)  
 
 ## Acknowledgement
 Thanks to GhatGPT :). I reached out for help with styling because I didn’t have enough time to work on the design myself.I was able to give the application a polished and appealing look without the extra time commitment.
