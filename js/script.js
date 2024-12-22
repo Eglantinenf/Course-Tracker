@@ -51,7 +51,7 @@ function formatTime(time) {
   }
 }
 
-// Drag-and-Drop Handlers
+// Drag-and-Drop Handlers => new feature :)
 let draggedIndex = null;
 
 function handleDragStart(event, index) {
@@ -60,7 +60,7 @@ function handleDragStart(event, index) {
 }
 
 function handleDragOver(event) {
-  event.preventDefault(); // Allow drop
+  event.preventDefault();
 }
 
 function handleDrop(event, targetIndex) {
