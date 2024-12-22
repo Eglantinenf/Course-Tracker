@@ -51,6 +51,30 @@ function formatTime(time) {
   }
 }
 
+// Drag-and-Drop Handlers
+let draggedIndex = null;
+
+function handleDragStart(event, index) {
+  draggedIndex = index;
+  event.target.classList.add("dragging");
+}
+
+function handleDragOver(event) {
+  event.preventDefault(); // Allow drop
+}
+
+function handleDrop(event, targetIndex) {
+  event.preventDefault();
+  const draggedItem = courses.splice(draggedIndex, 1)[0];
+  courses.splice(targetIndex, 0, draggedItem);
+  localStorage.setItem("courses", JSON.stringify(courses));
+  renderCourses();
+}
+
+function handleDragEnd(event) {
+  event.target.classList.remove("dragging");
+}
+
 function renderCourses() {
   const courseList = document.getElementById("courseList");
   courseList.innerHTML = "";
@@ -60,8 +84,15 @@ function renderCourses() {
   courses.forEach((course, index) => {
     const listItem = document.createElement("li");
     listItem.className = course.completed
-      ? "completed border-b border-gray-300 py-2"
-      : "border-b border-gray-200 py-2";
+      ? "completed border-b border-gray-300 py-2 draggable"
+      : "border-b border-gray-200 py-2 draggable";
+    listItem.draggable = true;
+
+    // Drag event listeners
+    listItem.addEventListener("dragstart", (e) => handleDragStart(e, index));
+    listItem.addEventListener("dragover", handleDragOver);
+    listItem.addEventListener("drop", (e) => handleDrop(e, index));
+    listItem.addEventListener("dragend", handleDragEnd);
 
     const formattedTime = formatTime(course.totalTime);
 
