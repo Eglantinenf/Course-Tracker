@@ -9,7 +9,8 @@ The Course Tracker allows users to add courses with titles and total lecture cou
 ## 📦 Features  
 
 - **Add Courses**: Easily enter the course title and the total number of lectures.  
-- **Mark Completion**: Keep track of completed lectures, with visual feedback for completed courses.  
+- **Mark Completion**: Keep track of completed lectures, with visual feedback for completed courses.
+- **Drag and Drop your course**: you can easily change youre courses place with dragging :)
 - **Local Storage**: Courses are saved in local storage, so your data is retained even after refreshing the page.  
 - **Total Time Overview**: View how many lectures you've completed and how many remain.  
 
